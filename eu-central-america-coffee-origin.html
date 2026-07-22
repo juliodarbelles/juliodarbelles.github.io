@@ -1,91 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Origin Problem Nobody Audited: EU Coffee Under the EU–Central America Association Agreement — Julio d'Arbelles</title>
 <meta name="description" content="Annex II of the EU–Central America Association Agreement makes the origin rule for roasted and instant coffee binary. The trade data shows Iberian roasters running on non-originating green coffee. An analysis of the accumulation provisions, the missing fungibles mechanism, and Article 30 verification exposure.">
-<meta name="author" content="Julio d'Arbelles">
-<meta property="og:title" content="The Origin Problem Nobody Audited: EU Coffee Under the EU–Central America Association Agreement">
-<meta property="og:description" content="Rules of origin, accumulation mechanics, and verification exposure for EU processed coffee entering Central America.">
-<meta property="og:type" content="article">
 <link rel="canonical" href="https://juliodarbelles.github.io/eu-central-america-coffee-origin.html">
+<meta property="og:title" content="The Origin Problem Nobody Audited: EU Coffee Under the EU–Central America Association Agreement">
+<meta property="og:description" content="Annex II of the EU–Central America Association Agreement makes the origin rule for roasted and instant coffee binary. The trade data shows Iberian roasters running on non-originating green coffee. An analysis of the accumulation provisions, the missing fungibles mechanism, and Article 30 verification exposure.">
+<meta property="og:image" content="coffee-cover.png">
+<meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Franklin:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F2E;--gold:#C9A227;--goldd:#8a6f18;--slate:#5A6572;--hair:#E4DFD3;--ink:#1A2A36;--cream:#F7F5F0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased;}
+a{color:var(--goldd);}
+.hero{width:100%;display:block;}
+.hero img{width:100%;height:auto;display:block;}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px 80px;}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--gold);margin-top:44px;}
+h1{font-weight:900;font-size:clamp(32px,6vw,50px);line-height:1.04;letter-spacing:-.02em;color:var(--navy);margin:14px 0 0;}
+.deck{font-size:clamp(17px,2.6vw,21px);line-height:1.45;color:var(--slate);margin-top:16px;}
+.pub{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--slate);margin-top:14px;}
+.pub a{text-decoration:none;}
+.author{display:flex;align-items:center;gap:15px;margin:26px 0 6px;padding:18px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+.author img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex:0 0 60px;}
+.author .name{font-weight:700;font-size:16px;color:var(--navy);}
+.author .meta{font-size:13px;color:var(--slate);line-height:1.55;}
+.author .meta a{text-decoration:none;}
+article{font-size:18px;}
+article p{margin:0 0 18px;}
+article p.lead{font-size:20px;font-weight:600;color:var(--navy);margin-top:30px;}
+h2{font-weight:700;font-size:23px;color:var(--navy);margin:38px 0 12px;padding-left:15px;border-left:4px solid var(--gold);line-height:1.2;}
+.stat{margin:26px 0;padding:26px 28px;background:var(--cream);border:1px solid var(--hair);border-radius:14px;}
+.stat b{display:block;font-weight:900;font-size:60px;line-height:1;color:var(--navy);letter-spacing:-.03em;}
+.stat span{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--slate);margin-top:12px;text-transform:uppercase;line-height:1.4;}
+.sources{margin-top:46px;padding-top:22px;border-top:2px solid var(--gold);}
+.sources .st{font-family:'IBM Plex Mono',monospace;font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--gold);margin-bottom:14px;}
+.sources ol{padding-left:20px;}
+.sources li{font-size:14px;line-height:1.6;color:var(--slate);margin-bottom:10px;}
+.foot{margin-top:40px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;color:#9aa2ab;}
+.foot a{color:var(--goldd);text-decoration:none;}
+@media(max-width:560px){article{font-size:17px;} .stat b{font-size:46px;}}
+</style>
 </head>
 <body>
-
-<header class="site">
-  <div class="wrap">
-    <div class="brand"><a href="index.html">JULIO D'ARBELLES</a></div>
-    <nav class="top">
-      <a href="index.html#practice">Practice</a>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-    </nav>
-  </div>
-</header>
-
-<article class="piece">
-  <div class="wrap">
-    <div class="a-kicker">Rules of Origin · EU–Central America Association Agreement</div>
-    <h1>The Origin Problem Nobody Audited: EU Coffee Under the EU–Central America Association Agreement</h1>
-    <p class="a-standfirst">The Agreement's origin rule for roasted and instant coffee is binary: the green bean must be wholly obtained. The trade data shows the Iberian roasting industry running on Vietnamese, Brazilian, and Colombian coffee. Between those two facts sits a verification exposure that has built quietly across many shipments.</p>
-    <div class="a-byline">By Julio d'Arbelles · First published as a LinkedIn Article, May 25, 2026 · Canonical version</div>
-
-    <h2>The Arithmetic First</h2>
-    <p>EU territory produces under 500 tons of green coffee. The European industry's demand leaves a gap of roughly 99.98 percent, closed entirely by imports. Spain by itself brings in around USD 817 million in green coffee annually, and the sourcing map is familiar: Vietnam near a third, Brazil about a quarter, Colombia close to eight percent, Uganda six, and the balance spread across other non-EU, non-Central-American origins. Central America, for its part, ships Iberia a marginal volume, on the order of USD 7 to 10 million a year.</p>
-    <p>The asymmetry runs deeper than the green bean. In its 2022 review of the Agreement, the WTO Committee on Regional Trade Agreements recorded that since entry into force in 2013, EU exports to Central America had grown 44 percent and Central American exports to the EU 96 percent. The relationship is structurally outbound for Central America, and coffee is one of the primary-sector lines the European Parliament's own implementation reporting still lists among the region's exports to the bloc. The EU does not send roasted coffee into Central America as an industrial flow; it sends machinery, chemicals and transport equipment. Which makes the volume of EU-origin coffee claims worth a second look on its own.</p>
-    <p>Now hold those numbers against what the Agreement actually requires.</p>
-
-    <h2>The Rule Is Binary</h2>
-    <p>Annex II, Appendix 2 sets the origin rule for Chapter 09. For roasted and decaffeinated roasted coffee, the text reads: <em class="reg">"manufacture in which all the materials of Chapter 09 used are wholly obtained."</em> For instant coffee and the preparations under heading 2101, the rule allows manufacture from materials of any heading except the product's own, but still requires all coffee of heading 0901 to be wholly obtained.</p>
-    <p>Read together, the two rules collapse into a single requirement. For coffee roasted in Spain to qualify as EU-originating under a EUR.1 sent to Central America, the green bean underneath has to be wholly obtained in EU territory or, through bilateral accumulation, in a signatory Central American country. There is no de minimis for Chapter 09 inputs. No value-added option stands in for the wholly-obtained test. The rule is binary by design, and the design is the point.</p>
-
-    <h2>The Andean Door Opens One Way</h2>
-    <p>The intuitive escape from that requirement is diagonal accumulation with the Andean countries. Colombia, Peru and Ecuador are serious producers, the EU has its own agreement with them, and the EU–Central America text references them in its origin provisions. It feels like the door should open.</p>
-    <p>It opens in one direction only. Article 3 of Annex II lets Andean materials count as Central American when they are processed into a product obtained in Central America. The European Commission's Access2Markets description runs the same way. Colombian green coffee roasted in Spain does not turn into EU-origin coffee for the certificate that travels back to Central America. The accumulation flows from the Andean region into the Central American manufacturing process, never from the Andean region into the European one. So the workaround most commonly assumed in practice does not survive a literal reading of the text.</p>
-    <p>Diagonal accumulation with Mexico, the rest of South America and the Caribbean is contemplated on request, subject to conditions. It has not been operationalised in a way that helps an Iberian roaster declaring EU origin on a Central American-bound shipment. The practical conclusion: an authorised exporter in Spain or Portugal issuing a EUR.1 for roasted or instant coffee to Central America has, in practice, only the bilateral accumulation door. The volumes recorded in SIECA suggest that door is being walked through at a fraction of what would be needed to support the EU origin claims being declared.</p>
-
-    <h2>The Fungibles Gap</h2>
-    <p>Two further flexibilities people reach for fail for the same structural reason. The general tolerance rule does not reach wholly-obtained agricultural inputs. And the fungible-materials provision — accounting segregation, the mechanism that in other EU agreements lets a manufacturer commingle originating and non-originating stock and account for origin rather than physically separating it — is not available here in the form it takes elsewhere. The EU–Mexico modernization framework, the EU–Korea FTA, the EU–Japan EPA, the EU–UK TCA, and the Pan-Euro-Mediterranean Convention all contain inventory separation provisions. The EU–Central America Association Agreement does not.</p>
-    <p>For a commodity that moves in bulk and gets blended as a matter of course, the absence of a usable fungibles mechanism is not a drafting footnote. It is the gap itself. A Spanish roaster cannot rely on a fungibles-and-netting argument to say that the originating green coffee in its inventory was the input for the roasted product exported to Central America. The Agreement provides no legal basis for that attribution. I want to be careful not to overstate this: there may be national customs practice in Spain or Portugal that has tolerated such an approach. But tolerance in the issuing administration is not a defense in the importing one.</p>
-
-    <h2>Where the Coffee Actually Goes</h2>
-    <p>The green coffee Spain and Portugal import is overwhelmingly destined for EU consumption or for re-export to third markets: North Africa, the Middle East, neighbouring EU countries, the United Kingdom under the post-Brexit arrangements. Very little roasted product flows from Iberia back to Central America, and what does flow is the long tail of specialty and gourmet trade, not the industrial volumes that would correspond to a normalised bilateral coffee relationship.</p>
-    <p>If Iberian roasters were running on Central American green coffee under bilateral accumulation and shipping the resulting roasted product back to the region, the return flow would appear in SIECA. It does not. The bilateral coffee trade is, in volume terms, a one-way street.</p>
-
-    <h2>Why This Is Live in 2026</h2>
-    <p>None of it would matter much if origin verification sat idle. It does not, and the pressure is converging from several directions.</p>
-    <p>Verification under Article 30. The customs authority of the importing Party may request subsequent verification of the EUR.1 at random or whenever it has reasonable doubts as to the originating status of the products. If the response from the issuing authority does not arrive within ten months, or arrives without sufficient information to establish the real origin, preferences are refused. The timeline is long enough that retroactive exposure builds quietly across many shipments before any single one is challenged. Article 21 fixes EUR.1 validity at twelve months from issue. Article 26 requires the exporter to retain supporting documents for at least three years. Article 32 imposes penalties on any person who draws up, or causes to be drawn up, a document containing incorrect information for the purpose of obtaining preferential tariff treatment. These provisions are the documentary spine that any post-clearance audit will follow back to the supplier's declaration.</p>
-    <p>Regulatory convergence. The EU Deforestation Regulation (2023/1115) already pushes geolocation requirements up the coffee supply chain. The EU's accession to the International Coffee Agreement 2022 moved through Council in early 2026. Add the corporate due-diligence regime and the Forced Labour Regulation, and what a EUR.1 declares now has to line up with what a separate due-diligence statement says about the same beans. Those documents were drafted by different teams for different regulators. They are about to be read side by side.</p>
-    <p>There is a calendar to watch as well. The Agreement runs through Association Councils; the second one for Central America falls in the 2027 window, fed by technical sub-committees, including the Sub-Committee on Customs, Trade Facilitation and Rules of Origin. That body is where any amendment to Annex II would be prepared. If the fungibles gap is ever closed, that is where it happens.</p>
-
-    <h2>What an Importer Can Do Now</h2>
-    <p>There are practical steps a Central American importer of EU-origin processed coffee can take this year, and together they form a defense.</p>
-    <p>Request from the EU exporter a supplier's declaration of origin. This shifts the documentary burden upstream where it belongs and gives the importer a paper trail that can be produced if a verification request arrives. Where the operation justifies it, request an advance origin ruling from the national customs administration. Costa Rica, Panama, Guatemala, and others have functional mechanisms for this. The ruling does not change the law, but it crystallizes the position of the administration before the entry, not after.</p>
-    <p>Engage procurement. If the EU origin claim is weak, the sourcing decision deserves a second look. There are EU producers who source within tighter origin parameters, and there are direct Central American roasting operations that, for some product specifications, are commercially competitive. And prepare for verification: the supplier's declaration, the EUR.1, and the commercial documentation should sit in a file that can be produced quickly and completely.</p>
-    <p>None of this is glamorous. It is what trade compliance work actually looks like when the cheerful version of an FTA meets the literal text of its origin rules.</p>
-
-    <h2>A Note on the Broader Question</h2>
-    <p>I have written this analysis because the question has come up enough times in the past year that I think it deserves a careful statement. I do not claim to have closed every interpretive corner. The Joint Committee may yet issue a Decision that addresses some of these points. National practice may evolve. A specific operation may have facts I have not considered.</p>
-    <p>What I do believe, having read Annex II closely, is that the comfortable assumption — that EU processed coffee qualifies for preferential treatment into Central America in most ordinary cases — is shakier than the industry has generally acted as if it were. The arithmetic of the trade balance and the architecture of the rules of origin both point in the same direction. The next twelve months will probably bring some clarification. For now, importers carrying material volumes of EU processed coffee should make sure their documentary position is strong, and that they understand what they would say to a verification request if one arrives.</p>
-
-    <div class="a-note">
-      <span class="lbl">Sources and Method</span>
-      Trade figures from SIECA and Eurostat Comext. Treaty text from Annex II of the EU–Central America Association Agreement (Appendix 2, product-specific rules for Chapter 09 and heading 2101; Articles 2, 3, 21, 26, 30, and 32). WTO Committee on Regional Trade Agreements, 2022 factual presentation. European Commission Access2Markets portal. Analysis and any errors are the author's own; nothing here is legal advice.
+<div class="hero"><img src="coffee-cover.png" alt="The Origin Problem Nobody Audited — EU coffee under the EU–Central America Association Agreement" onerror="this.parentElement.style.display='none'"></div>
+<div class="wrap">
+  <div class="eyebrow">Rules of Origin &middot; EU&ndash;Central America Association Agreement</div>
+  <h1>The Origin Problem Nobody Audited: EU Coffee Under the EU&ndash;Central America Association Agreement</h1>
+  <div class="deck">The Agreement's origin rule for roasted and instant coffee is binary: the green bean must be wholly obtained. The trade data shows the Iberian roasting industry running on Vietnamese, Brazilian, and Colombian coffee. Between those two facts sits a verification exposure that has built quietly across many shipments.</div>
+  <div class="pub">First published as a LinkedIn Article, May 25, 2026 &middot; Canonical version</div>
+  <div class="author">
+    <img src="author.jpg" alt="Julio d'Arbelles">
+    <div>
+      <div class="name">Julio d&rsquo;Arbelles</div>
+      <div class="meta">Trade Compliance &middot; Customs Valuation &middot; Rules of Origin<br>
+      <a href="https://juliodarbelles.github.io/#practice">juliodarbelles.github.io</a> &middot; <a href="https://www.linkedin.com/in/juliodarbelles">linkedin.com/in/juliodarbelles</a></div>
     </div>
   </div>
-</article>
-
-<footer class="site">
-  <div class="wrap">
-    <span>© 2026 Julio d'Arbelles · Newport News, Virginia</span>
-    <span><a href="index.html">← Back to all work</a></span>
+  <article>
+<h2>The Arithmetic First</h2>
+<div class="stat"><b>99.98%</b><span>Share of EU green-coffee demand met by imports from outside the bloc</span></div>
+<p class="lead">EU territory produces under 500 tons of green coffee. The European industry's demand leaves a gap of roughly 99.98 percent, closed entirely by imports. Spain by itself brings in around USD 817 million in green coffee annually, and the sourcing map is familiar: Vietnam near a third, Brazil about a quarter, Colombia close to eight percent, Uganda six, and the balance spread across other non-EU, non-Central-American origins. Central America, for its part, ships Iberia a marginal volume, on the order of USD 7 to 10 million a year.</p>
+<p>The asymmetry runs deeper than the green bean. In its 2022 review of the Agreement, the WTO Committee on Regional Trade Agreements recorded that since entry into force in 2013, EU exports to Central America had grown 44 percent and Central American exports to the EU 96 percent. The relationship is structurally outbound for Central America, and coffee is one of the primary-sector lines the European Parliament's own implementation reporting still lists among the region's exports to the bloc. The EU does not send roasted coffee into Central America as an industrial flow; it sends machinery, chemicals and transport equipment. Which makes the volume of EU-origin coffee claims worth a second look on its own.</p>
+<p>Now hold those numbers against what the Agreement actually requires.</p>
+<h2>The Rule Is Binary</h2>
+<p>Annex II, Appendix 2 sets the origin rule for Chapter 09. For roasted and decaffeinated roasted coffee, the text reads: <em class="reg">"manufacture in which all the materials of Chapter 09 used are wholly obtained."</em> For instant coffee and the preparations under heading 2101, the rule allows manufacture from materials of any heading except the product's own, but still requires all coffee of heading 0901 to be wholly obtained.</p>
+<p>Read together, the two rules collapse into a single requirement. For coffee roasted in Spain to qualify as EU-originating under a EUR.1 sent to Central America, the green bean underneath has to be wholly obtained in EU territory or, through bilateral accumulation, in a signatory Central American country. There is no de minimis for Chapter 09 inputs. No value-added option stands in for the wholly-obtained test. The rule is binary by design, and the design is the point.</p>
+<h2>The Andean Door Opens One Way</h2>
+<p>The intuitive escape from that requirement is diagonal accumulation with the Andean countries. Colombia, Peru and Ecuador are serious producers, the EU has its own agreement with them, and the EU–Central America text references them in its origin provisions. It feels like the door should open.</p>
+<p>It opens in one direction only. Article 3 of Annex II lets Andean materials count as Central American when they are processed into a product obtained in Central America. The European Commission's Access2Markets description runs the same way. Colombian green coffee roasted in Spain does not turn into EU-origin coffee for the certificate that travels back to Central America. The accumulation flows from the Andean region into the Central American manufacturing process, never from the Andean region into the European one. So the workaround most commonly assumed in practice does not survive a literal reading of the text.</p>
+<p>Diagonal accumulation with Mexico, the rest of South America and the Caribbean is contemplated on request, subject to conditions. It has not been operationalised in a way that helps an Iberian roaster declaring EU origin on a Central American-bound shipment. The practical conclusion: an authorised exporter in Spain or Portugal issuing a EUR.1 for roasted or instant coffee to Central America has, in practice, only the bilateral accumulation door. The volumes recorded in SIECA suggest that door is being walked through at a fraction of what would be needed to support the EU origin claims being declared.</p>
+<h2>The Fungibles Gap</h2>
+<p>Two further flexibilities people reach for fail for the same structural reason. The general tolerance rule does not reach wholly-obtained agricultural inputs. And the fungible-materials provision — accounting segregation, the mechanism that in other EU agreements lets a manufacturer commingle originating and non-originating stock and account for origin rather than physically separating it — is not available here in the form it takes elsewhere. The EU–Mexico modernization framework, the EU–Korea FTA, the EU–Japan EPA, the EU–UK TCA, and the Pan-Euro-Mediterranean Convention all contain inventory separation provisions. The EU–Central America Association Agreement does not.</p>
+<p>For a commodity that moves in bulk and gets blended as a matter of course, the absence of a usable fungibles mechanism is not a drafting footnote. It is the gap itself. A Spanish roaster cannot rely on a fungibles-and-netting argument to say that the originating green coffee in its inventory was the input for the roasted product exported to Central America. The Agreement provides no legal basis for that attribution. I want to be careful not to overstate this: there may be national customs practice in Spain or Portugal that has tolerated such an approach. But tolerance in the issuing administration is not a defense in the importing one.</p>
+<h2>Where the Coffee Actually Goes</h2>
+<p>The green coffee Spain and Portugal import is overwhelmingly destined for EU consumption or for re-export to third markets: North Africa, the Middle East, neighbouring EU countries, the United Kingdom under the post-Brexit arrangements. Very little roasted product flows from Iberia back to Central America, and what does flow is the long tail of specialty and gourmet trade, not the industrial volumes that would correspond to a normalised bilateral coffee relationship.</p>
+<p>If Iberian roasters were running on Central American green coffee under bilateral accumulation and shipping the resulting roasted product back to the region, the return flow would appear in SIECA. It does not. The bilateral coffee trade is, in volume terms, a one-way street.</p>
+<h2>Why This Is Live in 2026</h2>
+<p>None of it would matter much if origin verification sat idle. It does not, and the pressure is converging from several directions.</p>
+<p>Verification under Article 30. The customs authority of the importing Party may request subsequent verification of the EUR.1 at random or whenever it has reasonable doubts as to the originating status of the products. If the response from the issuing authority does not arrive within ten months, or arrives without sufficient information to establish the real origin, preferences are refused. The timeline is long enough that retroactive exposure builds quietly across many shipments before any single one is challenged. Article 21 fixes EUR.1 validity at twelve months from issue. Article 26 requires the exporter to retain supporting documents for at least three years. Article 32 imposes penalties on any person who draws up, or causes to be drawn up, a document containing incorrect information for the purpose of obtaining preferential tariff treatment. These provisions are the documentary spine that any post-clearance audit will follow back to the supplier's declaration.</p>
+<p>Regulatory convergence. The EU Deforestation Regulation (2023/1115) already pushes geolocation requirements up the coffee supply chain. The EU's accession to the International Coffee Agreement 2022 moved through Council in early 2026. Add the corporate due-diligence regime and the Forced Labour Regulation, and what a EUR.1 declares now has to line up with what a separate due-diligence statement says about the same beans. Those documents were drafted by different teams for different regulators. They are about to be read side by side.</p>
+<p>There is a calendar to watch as well. The Agreement runs through Association Councils; the second one for Central America falls in the 2027 window, fed by technical sub-committees, including the Sub-Committee on Customs, Trade Facilitation and Rules of Origin. That body is where any amendment to Annex II would be prepared. If the fungibles gap is ever closed, that is where it happens.</p>
+<h2>What an Importer Can Do Now</h2>
+<p>There are practical steps a Central American importer of EU-origin processed coffee can take this year, and together they form a defense.</p>
+<p>Request from the EU exporter a supplier's declaration of origin. This shifts the documentary burden upstream where it belongs and gives the importer a paper trail that can be produced if a verification request arrives. Where the operation justifies it, request an advance origin ruling from the national customs administration. Costa Rica, Panama, Guatemala, and others have functional mechanisms for this. The ruling does not change the law, but it crystallizes the position of the administration before the entry, not after.</p>
+<p>Engage procurement. If the EU origin claim is weak, the sourcing decision deserves a second look. There are EU producers who source within tighter origin parameters, and there are direct Central American roasting operations that, for some product specifications, are commercially competitive. And prepare for verification: the supplier's declaration, the EUR.1, and the commercial documentation should sit in a file that can be produced quickly and completely.</p>
+<p>None of this is glamorous. It is what trade compliance work actually looks like when the cheerful version of an FTA meets the literal text of its origin rules.</p>
+<h2>A Note on the Broader Question</h2>
+<p>I have written this analysis because the question has come up enough times in the past year that I think it deserves a careful statement. I do not claim to have closed every interpretive corner. The Joint Committee may yet issue a Decision that addresses some of these points. National practice may evolve. A specific operation may have facts I have not considered.</p>
+<p>What I do believe, having read Annex II closely, is that the comfortable assumption — that EU processed coffee qualifies for preferential treatment into Central America in most ordinary cases — is shakier than the industry has generally acted as if it were. The arithmetic of the trade balance and the architecture of the rules of origin both point in the same direction. The next twelve months will probably bring some clarification. For now, importers carrying material volumes of EU processed coffee should make sure their documentary position is strong, and that they understand what they would say to a verification request if one arrives.</p>
+  </article>
+  <div class="sources">
+    <div class="st">Primary sources</div>
+    <ol>
+<li>SIECA, Sistema de Estad&iacute;sticas de Comercio de Centroam&eacute;rica; Eurostat Comext, green and processed coffee trade series.</li>
+<li>EU&ndash;Central America Association Agreement, Annex II (Appendix 2, product-specific rules for Chapter 09 and heading 2101; Articles 2, 3, 21, 26, 30, and 32), OJ L 346/2012.</li>
+<li>WTO Committee on Regional Trade Agreements, 2022 factual presentation of the EU&ndash;Central America Association Agreement.</li>
+<li>European Commission, Access2Markets portal (rules of origin and cumulation guidance for the EU&ndash;Central America Agreement).</li>
+<li>EU Deforestation Regulation (EU) 2023/1115 (geolocation and due-diligence requirements for coffee supply chains).</li>
+    </ol>
   </div>
-</footer>
-
+  <div class="foot">&copy; 2026 Julio d&rsquo;Arbelles &middot; <a href="https://juliodarbelles.github.io/">juliodarbelles.github.io</a></div>
+</div>
 </body>
 </html>
