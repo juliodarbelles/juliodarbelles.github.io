@@ -49,9 +49,19 @@ h2{font-weight:700;font-size:23px;color:var(--navy);margin:38px 0 12px;padding-l
 .fig.portrait{max-width:520px;margin-left:auto;margin-right:auto;}
 .fig .cap{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--slate);margin-top:10px;line-height:1.5;}
 @media(max-width:560px){article{font-size:17px;} .stat b{font-size:46px;}}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,31,46,.97);backdrop-filter:saturate(1.2) blur(6px);display:flex;align-items:center;justify-content:space-between;padding:13px 22px;}
+.topbar .brand{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#F7F5F0;text-decoration:none;}
+.topbar .navlink{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9A227;text-decoration:none;}
+.topbar .navlink:hover{color:#E5BA2C;}
+.backfoot{margin-top:34px;}
+.backfoot a{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9A227;text-decoration:none;border:1px solid rgba(201,162,39,.45);padding:11px 18px;border-radius:6px;}
+.backfoot a:hover{background:rgba(201,162,39,.10);}
+@media(max-width:560px){.topbar .brand{font-size:11px;letter-spacing:.12em;} .topbar .navlink{font-size:11px;}}
 </style>
 </head>
 <body>
+<div class="topbar"><a class="brand" href="index.html">Julio d'Arbelles</a><a class="navlink" href="index.html">All analyses</a></div>
 <div class="hero"><img src="accumulation-cover.png" alt="Accumulation does not travel — two family circles intersecting on one carton"></div>
 <div class="wrap">
   <div class="eyebrow">Rules of Origin &middot; CAFTA-DR &times; EU&ndash;Central America</div>
@@ -115,6 +125,7 @@ h2{font-weight:700;font-size:23px;color:var(--navy);margin:38px 0 12px;padding-l
 <li>Panamanian customs legislation on transit, transshipment, and customs deposit regimes; transshipment and non-manipulation certification issued under the custody of the Autoridad Nacional de Aduanas for cargo held in primary customs zones, bonded warehouses, and special zones.</li>
     </ol>
   </div>
+  <div class="backfoot"><a href="index.html">← All analyses</a></div>
   <div class="foot">&copy; 2026 Julio d&rsquo;Arbelles &middot; <a href="https://juliodarbelles.github.io/">juliodarbelles.github.io</a></div>
 </div>
 </body>

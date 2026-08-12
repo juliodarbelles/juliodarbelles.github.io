@@ -43,15 +43,23 @@ ol.sources{margin-top:22px;padding-left:22px;}
 ol.sources li{font-size:15px;line-height:1.65;color:#3C4A54;margin-top:12px;text-align:justify;}
 .foot{margin-top:56px;padding-top:24px;border-top:1px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--slate);text-align:justify;}
 @media(max-width:640px){h1{font-size:34px;}p{font-size:17px;}}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(11,31,46,.97);backdrop-filter:saturate(1.2) blur(6px);display:flex;align-items:center;justify-content:space-between;padding:13px 22px;}
+.topbar .brand{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#F7F5F0;text-decoration:none;}
+.topbar .navlink{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9A227;text-decoration:none;}
+.topbar .navlink:hover{color:#E5BA2C;}
+.backfoot{margin-top:34px;}
+.backfoot a{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#C9A227;text-decoration:none;border:1px solid rgba(201,162,39,.45);padding:11px 18px;border-radius:6px;}
+.backfoot a:hover{background:rgba(201,162,39,.10);}
+@media(max-width:560px){.topbar .brand{font-size:11px;letter-spacing:.12em;} .topbar .navlink{font-size:11px;}}
 </style>
 </head>
 <body>
 
+<div class="topbar"><a class="brand" href="index.html">Julio d'Arbelles</a><a class="navlink" href="index.html">All analyses</a></div>
 <div class="hero"><img src="laminate-cover.png" alt="Classification is an origin decision — laminate cross-section with the aluminium layer highlighted, migrating from tariff line 3921.90 to 7607.20"></div>
 
 <div class="wrap">
-<a class="back" href="index.html">← All analyses</a>
-
 <div class="eyebrow">Rules of Origin · Tariff Classification</div>
 <h1>Classification Is an Origin Decision</h1>
 <div class="deck">Both tariff lines paid the same duty. The reclassification was worth three hundred thousand dollars anyway, and it took three years to collect.</div>
@@ -190,7 +198,8 @@ ol.sources li{font-size:15px;line-height:1.65;color:#3C4A54;margin-top:12px;text
 <li>OAS Foreign Trade Information System (SICE), texts and Free Trade Commission decisions of the Central America–Chile Free Trade Agreement.</li>
 </ol>
 
-<div class="foot">© 2026 Julio d'Arbelles. This analysis may be cited with attribution. Company names are omitted throughout; the operation is described generically as an export-manufacturing operation.</div>
+<div class="backfoot"><a href="index.html">← All analyses</a></div>
+  <div class="foot">© 2026 Julio d'Arbelles. This analysis may be cited with attribution. Company names are omitted throughout; the operation is described generically as an export-manufacturing operation.</div>
 
 </div>
 </body>
